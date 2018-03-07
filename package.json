@@ -1,0 +1,19 @@
+{
+  "name": "mizore-akairo-build",
+  "version": "1.0.0",
+  "description": "A discord bot handled and maintained by OblivionSan using the Discord-Akairo framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "OblivionSan",
+  "license": "MIT",
+  "dependencies": {
+    "apiai": "^4.0.3",
+    "chalk": "^2.3.2",
+    "discord-akairo": "^7.5.4",
+    "discord.js": "^11.3.0",
+    "moment": "^2.21.0",
+    "util": "^0.10.3"
+  }
+}
