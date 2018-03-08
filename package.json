@@ -14,6 +14,6 @@
     "discord-akairo": "^7.5.4",
     "discord.js": "^11.3.0",
     "moment": "^2.21.0",
-    "util": "^0.10.3"
+    "snekfetch": "^3.6.1"
   }
 }
