@@ -7,6 +7,7 @@ class InfoCommand extends Command {
     constructor() {
         super('info', {
             aliases: ['info'],
+            channelRestriction: 'guild',
             args: [{
                 id: 'member',
                 type: 'member',

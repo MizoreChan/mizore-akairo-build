@@ -4,6 +4,7 @@ const config = require("./config.json");
 const client = new AkairoClient({
     ownerID: config.ownerID,
     prefix: config.prefix,
+    allowMention: true,
     defaultCooldown: 2500,
     emitters: {
         process

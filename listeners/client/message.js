@@ -11,13 +11,16 @@ class MessageListener extends Listener {
 
     exec(message) {
         if (message.content.includes(config.prefix)) {
-            console.log(message.guild.name + " ~ " + message.author.tag + " : " + message.content);
+            try {
+                console.log(message.guild.name + " ~ " + message.author.tag + " : " + message.content);
+            } catch (error) {
+                return;
+            }
         } else {
             return;
         }
 
         if (message.author.bot) return;
-        if (message.channel.type === 'dm') return;
     }
 }
 

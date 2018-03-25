@@ -9,7 +9,6 @@ class UnhandledRejectionListener extends Listener {
             emitter: 'process'
         });
     }
-
     exec(error) {
         if (error.message === 'Missing Permissions') return;
         else {
@@ -17,6 +16,7 @@ class UnhandledRejectionListener extends Listener {
             err(`${chalk.red('ERROR_MESSAGE')}  : ${error.message}`);
             err(`${chalk.red('ERROR_PATH')}     : ${error.path}`);
             err(`${chalk.red('ERROR_CODE')}     : ${error.code}`);
+            err(`${chalk.red('ERROR_STACK')}    : ${error.stack}`);
         }
     }
 }

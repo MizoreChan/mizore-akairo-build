@@ -4,6 +4,7 @@ class CodeCommand extends Command {
     constructor() {
         super('code', {
             aliases: ['code'],
+            channelRestriction: 'guild',
             args: [
             {
                 id: 'type',

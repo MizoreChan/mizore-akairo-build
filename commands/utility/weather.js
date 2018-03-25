@@ -6,6 +6,7 @@ class WeatherCommand extends Command {
     constructor() {
         super('weather', {
             aliases: ['weather', 'wthr'],
+            channelRestriction: 'guild',
             args: [{
                 id: 'suffix',
                 type: 'string',

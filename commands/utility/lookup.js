@@ -6,6 +6,7 @@ class LookupCommand extends Command {
     constructor() {
         super('lookup', {
             aliases: ['lookup'],
+            channelRestriction: 'guild',
             args: [{
                 id: 'input',
                 type: 'string'
