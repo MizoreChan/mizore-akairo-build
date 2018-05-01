@@ -4,8 +4,7 @@ class InviteCommand extends Command {
 	constructor() {
 		super('invite', {
 			aliases: ['invite', 'inv'],
-			channelRestriction: 'guild',
-			description: 'Gets API Lantancy',
+			channelRestriction: 'guild'
 		});
 	}
 
