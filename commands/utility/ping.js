@@ -13,11 +13,9 @@ class PingCommand extends Command {
 			message.channel.send({
 				embed: {
 					color: 10181046,
-					description: `:ping_pong: **PONG!** - API Lantancy is ** ${Date.now() - message.createdTimestamp} ms**`,
-					timestamp: new Date(),
+					description: `💛 API : ** ${Date.now() - message.createdTimestamp} ms** | :heart: Client : **${Math.round(this.client.ping)} ms**`,
 					footer: {
-						icon_url: this.client.user.avatarURL,
-						text: `Heartbeat - ${Math.round(this.client.ping)}ms.`
+						text: `Requested by ${message.author.username} | 💛 API : ${Date.now() - message.createdTimestamp} ms`
 					}
 				}
 			});

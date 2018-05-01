@@ -2,10 +2,10 @@ const { Command } = require('discord-akairo');
 const request = require('snekfetch');
 const Discord = require('discord.js');
 
-class PatCommand extends Command {
+class SlapCommand extends Command {
     constructor() {
-        super('pat', {
-            aliases: ['pat'],
+        super('slap', {
+            aliases: ['slap'],
             args: [{
                 id: 'input',
                 type: 'string',
@@ -16,9 +16,9 @@ class PatCommand extends Command {
 
     exec(message, args) {
         if (!args.input) {
-            request.get('https://weebs.cf/random/pat').then(body => {
+            request.get('https://weebs.cf/random/slap').then(body => {
                 let embed = new Discord.RichEmbed()
-                    .setDescription(`**${this.client.user.username}** pats **${message.author.username}**`)
+                    .setDescription(`**${this.client.user.username}** slaps **${message.author.username}**`)
                     .setImage(body.text)
                     .setFooter(`Requested by ${message.author.username} | 💛 API : ${Date.now() - message.createdTimestamp} ms`)
                     .setColor(0xffffff);
@@ -27,9 +27,9 @@ class PatCommand extends Command {
                 });
             });
         } else {
-            request.get('https://weebs.cf/random/pat').then(body => {
+            request.get('https://weebs.cf/random/slap').then(body => {
                 let embed = new Discord.RichEmbed()
-                    .setDescription(`**${message.author.username}** pats **${args.input}**`)
+                    .setDescription(`**${message.author.username}** slaps **${args.input}**`)
                     .setImage(body.text)
                     .setFooter(`Requested by ${message.author.username} | 💛 API : ${Date.now() - message.createdTimestamp} ms`)
                     .setColor(0xffffff);
@@ -41,4 +41,4 @@ class PatCommand extends Command {
     }
     }
 
-module.exports = PatCommand;
+module.exports = SlapCommand;

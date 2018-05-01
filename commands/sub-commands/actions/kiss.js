@@ -16,20 +16,22 @@ class KissCommand extends Command {
 
     exec(message, args) {
         if (!args.input) {
-            request.get(`https://weebs.cf/random/kiss`).then(body => {
+            request.get('https://weebs.cf/random/kiss').then(body => {
                 let embed = new Discord.RichEmbed()
                     .setDescription(`**${this.client.user.username}** kisses **${message.author.username}**`)
                     .setImage(body.text)
+                    .setFooter(`Requested by ${message.author.username} | 💛 API : ${Date.now() - message.createdTimestamp} ms`)
                     .setColor(0xffffff);
                 message.channel.send({
                     embed: embed
                 });
             });
         } else {
-            request.get(`https://weebs.cf/random/kiss`).then(body => {
+            request.get('https://weebs.cf/random/kiss').then(body => {
                 let embed = new Discord.RichEmbed()
                     .setDescription(`**${message.author.username}** kisses **${args.input}**`)
                     .setImage(body.text)
+                    .setFooter(`Requested by ${message.author.username} | 💛 API : ${Date.now() - message.createdTimestamp} ms`)
                     .setColor(0xffffff);
                 message.channel.send({
                     embed: embed

@@ -21,7 +21,7 @@ class EmbedCommand extends Command {
                     color: 0xff2727,
                     description: `:warning: **${message.author.username}**, You didn't give me anything to embed. {m!embed \`input\`}`,
                     footer: {
-                        text: 'API Lantancy is ' + `${Date.now() - message.createdTimestamp}` + ' ms',
+                        text: `Requested by ${message.author.username} | 💛 API : ${Date.now() - message.createdTimestamp} ms`,
                     }
                 }
             });

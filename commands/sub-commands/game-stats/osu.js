@@ -20,7 +20,7 @@ class OsuCommand extends Command {
                     color: 0xff2727,
                     description: `:warning: **${message.author.username}**, You didn't give me anything to search. {m!osu \`osu-username\`}`,
                     footer: {
-                        text: 'API Lantancy is ' + `${Date.now() - message.createdTimestamp}` + ' ms',
+                        text: `Requested by ${message.author.username} | 💛 API : ${Date.now() - message.createdTimestamp} ms`,
                     }
                 }
             });
