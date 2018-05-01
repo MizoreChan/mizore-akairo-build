@@ -39,6 +39,6 @@ class HugCommand extends Command {
             });
         }
     }
-    }
+}
 
 module.exports = HugCommand;

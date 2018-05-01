@@ -1,4 +1,6 @@
 const { Command } = require('discord-akairo');
+const Discord = require('discord.js');
+const color = require('../../color.json');
 
 class InviteCommand extends Command {
 	constructor() {
@@ -9,16 +11,13 @@ class InviteCommand extends Command {
 	}
 
     exec(message) {
-			message.channel.send({
-				embed: {
-                    color: 10181046,
-                    title: "Invite links to Mizore-Chan",
-					description: `Once invited, type \`m!help\` to see my commands.\n[ [**Main Invite**](https://discordapp.com/oauth2/authorize/?permissions=2146958591&scope=bot&client_id=${this.client.user.id}) | [**Discord Bot List**](https://discordbots.org/bot/339112443743698947) | [**bots.discord.pw**](https://bots.discord.pw/bots/339112443743698947) ]`,
-					footer: {
-						text: `Requested by ${message.author.username} | ` + 'API Lantancy is ' + `${Date.now() - message.createdTimestamp}` + ' ms'
-					}
-				}
-			});
+		let embed = new Discord.RichEmbed()
+			.setDescription(`\`📩\` **Once invited, type \`m!help\` to see my commands.**\n[ [**Main Invite**](https://discordapp.com/oauth2/authorize/?permissions=2146958591&scope=bot&client_id=${this.client.user.id}) | [**Discord Bot List**](https://discordbots.org/bot/339112443743698947) | [**bots.discord.pw**](https://bots.discord.pw/bots/339112443743698947) ]`)
+			.setFooter(`Requested by ${message.author.username} | 💛 API : ${Date.now() - message.createdTimestamp} ms`)
+			.setColor(color.main);
+		message.author.send ({
+			embed: embed
+		});
     }
 }
 

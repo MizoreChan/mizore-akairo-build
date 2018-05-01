@@ -39,6 +39,6 @@ class SlapCommand extends Command {
             });
         }
     }
-    }
+}
 
 module.exports = SlapCommand;

@@ -39,6 +39,6 @@ class PatCommand extends Command {
             });
         }
     }
-    }
+}
 
 module.exports = PatCommand;

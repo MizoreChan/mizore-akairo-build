@@ -39,6 +39,6 @@ class PokeCommand extends Command {
             });
         }
     }
-    }
+}
 
 module.exports = PokeCommand;

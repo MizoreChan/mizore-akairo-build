@@ -39,6 +39,6 @@ class PunchCommand extends Command {
             });
         }
     }
-    }
+}
 
 module.exports = PunchCommand;

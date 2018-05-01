@@ -39,6 +39,6 @@ class KissCommand extends Command {
             });
         }
     }
-    }
+}
 
 module.exports = KissCommand;
