@@ -1,5 +1,5 @@
 <p align="center"><a href="https://mizore.tk"><img src="https://i.imgur.com/69SmQVy.png"/></a></p>
-<p align="center">A discord-bot handled and maintained by <a href="https://oblivionsan.tk">Oblivion サン</a></p>
+<p align="center">A discord-bot handled and maintained by <a href="https://oblivionsan.tk">Oblivion さん</a></p>
 
 ## Main Features
   - Anime & Manga search commands.
