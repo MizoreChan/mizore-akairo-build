@@ -1,7 +1,7 @@
 const { Command } = require('discord-akairo');
 const request = require('snekfetch');
 const Discord = require('discord.js');
-const color = require('../../../color.json');
+const config = require('../../../config.json');
 
 class NekoCommand extends Command {
 	constructor() {
@@ -21,7 +21,7 @@ class NekoCommand extends Command {
                 let embed = new Discord.RichEmbed()
                     .setImage(JSON.parse(body.text).url)
                     .setFooter(`Requested by ${message.author.username} | 💛 API : ${Date.now() - message.createdTimestamp} ms`)
-                    .setColor(color.second);
+                    .setColor(config.color.second);
                 message.channel.send({
                     embed: embed
                 });
@@ -33,7 +33,7 @@ class NekoCommand extends Command {
                 let embed = new Discord.RichEmbed()
                     .setImage(JSON.parse(body.text).url)
                     .setFooter(`Requested by ${message.author.username} | 💛 API : ${Date.now() - message.createdTimestamp} ms`)
-                    .setColor(color.second);
+                    .setColor(config.color.second);
                 message.channel.send({
                     embed: embed
                 });
@@ -42,7 +42,7 @@ class NekoCommand extends Command {
             let embed = new Discord.RichEmbed()
                 .setDescription(`\`⛔\` **${message.author.username} :** \`#${message.channel.name}\` must have \`NSFW\` enabled.`)
                 .setFooter(`Requested by ${message.author.username} | 💛 API : ${Date.now() - message.createdTimestamp} ms`)
-                .setColor(color.err);
+                .setColor(config.color.err);
             message.channel.send({
                 embed: embed
             });

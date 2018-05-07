@@ -1,5 +1,10 @@
 {
     "prefix": "",
     "ownerID": "",
-    "token" : ""
+    "token" : "",
+    "color": {
+        "err": "",
+        "main": "",
+        "second": ""
+    }
 }

@@ -30,6 +30,7 @@ class EmbedCommand extends Command {
             let color = ((1 << 24) * Math.random() | 0).toString(16);
             let embed = new Discord.RichEmbed()
                 .setDescription(args.input)
+                .setFooter(`Requested by ${message.author.username} | 💛 API : ${Date.now() - message.createdTimestamp} ms`)
                 .setColor(`#${color}`);
             message.channel.send({
                 embed: embed
