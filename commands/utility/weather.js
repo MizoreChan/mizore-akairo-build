@@ -1,5 +1,7 @@
 const { Command } = require('discord-akairo');
 const request = require('snekfetch');
+const Discord = require('discord.js');
+const config = require('../../config.json');
 const cb = '```';
 
 class WeatherCommand extends Command {
@@ -17,14 +19,12 @@ class WeatherCommand extends Command {
 
     exec(message, args) {
         if (!args.suffix) {
+            let embed = new Discord.RichEmbed()
+                .setDescription(`\`⛔\` **${message.author.username} :** You didn't give me a location. | \`m!weather {input}\``)
+                .setFooter(`Requested by ${message.author.username} | 💛 API : ${Date.now() - message.createdTimestamp} ms`)
+                .setColor(config.color.err);
             message.channel.send({
-                embed: {
-                    color: 0xff2727,
-                    description: `:warning: **${message.author.username}**, You didn't give me a location. {m!lweather \`location\`}`,
-                    footer: {
-                        text: `Requested by ${message.author.username} | 💛 API : ${Date.now() - message.createdTimestamp} ms`,
-                    }
-                }
+                embed: embed
             });
         } else {
             request.get(`http://wttr.in/${args.suffix.replace(' ', '%20')}?T0`).then(data => {

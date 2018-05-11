@@ -1,5 +1,6 @@
 const { Command } = require('discord-akairo');
 const Discord = require("discord.js");
+const config = require('../../config.json');
 
 class EmbedCommand extends Command {
     constructor() {
@@ -16,14 +17,12 @@ class EmbedCommand extends Command {
 
     exec(message, args) {
         if (!args.input) {
+            let embed = new Discord.RichEmbed()
+                .setDescription(`\`⛔\` **${message.author.username} :** You didn't give me anything to embed. | \`m!embed {input}\``)
+                .setFooter(`Requested by ${message.author.username} | 💛 API : ${Date.now() - message.createdTimestamp} ms`)
+                .setColor(config.color.err);
             message.channel.send({
-                embed: {
-                    color: 0xff2727,
-                    description: `:warning: **${message.author.username}**, You didn't give me anything to embed. {m!embed \`input\`}`,
-                    footer: {
-                        text: `Requested by ${message.author.username} | 💛 API : ${Date.now() - message.createdTimestamp} ms`,
-                    }
-                }
+                embed: embed
             });
         } else {
             message.delete();

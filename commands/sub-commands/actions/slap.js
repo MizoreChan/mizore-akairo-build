@@ -1,6 +1,7 @@
 const { Command } = require('discord-akairo');
 const request = require('snekfetch');
 const Discord = require('discord.js');
+const config = require('../../../config.json');
 
 class SlapCommand extends Command {
     constructor() {
@@ -21,7 +22,7 @@ class SlapCommand extends Command {
                     .setDescription(`**${this.client.user.username}** slaps **${message.author.username}**`)
                     .setImage(body.text)
                     .setFooter(`Requested by ${message.author.username} | 💛 API : ${Date.now() - message.createdTimestamp} ms`)
-                    .setColor(0xffffff);
+                    .setColor(config.color.second);
                 message.channel.send({
                     embed: embed
                 });
@@ -32,7 +33,7 @@ class SlapCommand extends Command {
                     .setDescription(`**${message.author.username}** slaps **${args.input}**`)
                     .setImage(body.text)
                     .setFooter(`Requested by ${message.author.username} | 💛 API : ${Date.now() - message.createdTimestamp} ms`)
-                    .setColor(0xffffff);
+                    .setColor(config.color.second);
                 message.channel.send({
                     embed: embed
                 });
