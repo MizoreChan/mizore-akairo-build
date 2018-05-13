@@ -7,6 +7,7 @@ class KissCommand extends Command {
     constructor() {
         super('kiss', {
             aliases: ['kiss'],
+            channelRestriction: 'guild',
             args: [{
                 id: 'input',
                 type: 'string',

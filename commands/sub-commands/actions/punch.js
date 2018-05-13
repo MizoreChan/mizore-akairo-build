@@ -7,6 +7,7 @@ class PunchCommand extends Command {
     constructor() {
         super('punch', {
             aliases: ['punch'],
+            channelRestriction: 'guild',
             args: [{
                 id: 'input',
                 type: 'string',

@@ -7,6 +7,7 @@ class HugCommand extends Command {
     constructor() {
         super('hug', {
             aliases: ['hug'],
+            channelRestriction: 'guild',
             args: [{
                 id: 'input',
                 type: 'string',

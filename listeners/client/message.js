@@ -12,7 +12,7 @@ class MessageListener extends Listener {
     exec(message) {
         if (message.content.includes(config.prefix)) {
             try {
-                console.log(message.guild.name + " ~ " + message.author.tag + " : " + message.content);
+                console.log(`[CH NAME: ${message.guild.name} | USER: ${message.author.username}#${message.author.discriminator} | ID: ${message.author.id}] : ${message.content}`);
             } catch (error) {
                 return;
             }

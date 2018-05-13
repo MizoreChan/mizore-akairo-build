@@ -7,6 +7,7 @@ class SlapCommand extends Command {
     constructor() {
         super('slap', {
             aliases: ['slap'],
+            channelRestriction: 'guild',
             args: [{
                 id: 'input',
                 type: 'string',

@@ -7,6 +7,7 @@ class PatCommand extends Command {
     constructor() {
         super('pat', {
             aliases: ['pat'],
+            channelRestriction: 'guild',
             args: [{
                 id: 'input',
                 type: 'string',

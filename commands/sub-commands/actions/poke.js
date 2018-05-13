@@ -7,6 +7,7 @@ class PokeCommand extends Command {
     constructor() {
         super('poke', {
             aliases: ['poke'],
+            channelRestriction: 'guild',
             args: [{
                 id: 'input',
                 type: 'string',

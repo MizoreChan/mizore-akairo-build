@@ -17,6 +17,14 @@ class InviteCommand extends Command {
 			.setColor(config.color.main);
 		message.author.send ({
 			embed: embed
+		}).catch(err => {
+			let embed = new Discord.RichEmbed()
+				.setDescription(`\`⛔\` **${message.author.username} :** ${err.message}`)
+                .setFooter(`Requested by ${message.author.username} | 💛 API : ${Date.now() - message.createdTimestamp} ms`)
+                .setColor(config.color.err);
+            message.channel.send({
+                embed: embed
+            });
 		});
     }
 }
