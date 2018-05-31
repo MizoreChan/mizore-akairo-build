@@ -10,7 +10,7 @@ class CommandStartedListener extends Listener {
 	}
 
 	exec(message) {
-		console.log(`${chalk.green('[LOGS]')} [CH NAME: ${message.guild.name} | USER: ${message.author.tag} | ID: ${message.author.id}] => ${message.content}`);
+		console.log(`${chalk.green('[LOGS]')} [SERV_NAME: ${message.guild.name} | CHNL_NAME: ${message.channel.name} | CHNL_ID: ${message.channel.id} | USER: ${message.author.tag} | UID: ${message.author.id}] => ${message.content}`);
 	}
 }
 
