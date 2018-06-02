@@ -1,4 +1,6 @@
-<p align="center"><a href="https://mizore.tk"><img src="https://i.imgur.com/69SmQVy.png"/></a></p>
+<a href="https://mizore.tk/commands"><img src="https://i.imgur.com/PmkADgH.jpg"></a>
+<a href="https://mizore.tk"><img src="https://i.imgur.com/hG7VRnm.jpg"></a>
+<a href="https://discordapp.com/oauth2/authorize/?permissions=2146958591&scope=bot&client_id=339112443743698947"><img src="https://i.imgur.com/P8OMN2N.jpg"></a>
 <p align="center">A discord-bot handled and maintained by <a href="https://oblivionsan.tk">Oblivion さん</a></p>
 
 ## Main Features
